@@ -36,7 +36,10 @@ def display_performance(percent):
         orange: 40 - 60%
         green: 60 - 150%
      """
-    width = st_dimensions(key="main")['width']
+    width = 0
+    dim = st_dimensions()
+    if dim:
+        width = dim['width']
    
     # here total width is 150%
     end_red = int((40/150)*width)
